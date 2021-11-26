@@ -1,4 +1,4 @@
-import 'package:chetan_koli/Widgets/custom_appbar.dart';
+import 'package:chetan_koli/Widgets/custom_widgets.dart';
 import 'package:flutter/material.dart';
 
 class ScreenOne extends StatelessWidget {
