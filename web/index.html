@@ -97,5 +97,24 @@
       loadMainDartJs();
     }
   </script>
+
+
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA8_eQgtmTwxJt_9aCNwGG5MA90SDh3XxQ",
+    authDomain: "flutterproject-6765d.firebaseapp.com",
+    projectId: "flutterproject-6765d",
+    storageBucket: "flutterproject-6765d.appspot.com",
+    messagingSenderId: "227747581290",
+    appId: "1:227747581290:web:36e31f273638f979b3a913",
+    measurementId: "G-CNQ2R5KZZR"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>

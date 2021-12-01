@@ -23,6 +23,7 @@ class _ViewAllUsersState extends State<ViewAllUsers> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController addressController = TextEditingController();
 
+
   @override
   void initState() {
     super.initState();
@@ -63,6 +64,7 @@ class _ViewAllUsersState extends State<ViewAllUsers> {
     phoneController.text = datas[index].phone;
     addressController.text = datas[index].address;
     showUpdateDialog();
+
   }
 
   void delete(int index) {
@@ -123,7 +125,7 @@ class _ViewAllUsersState extends State<ViewAllUsers> {
                   setState(() {});
                   Navigator.pop(context);
                 },
-                child: Text("Update"),
+                child: const Text("Update"),
               ),
             ],
           );

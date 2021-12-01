@@ -8,15 +8,20 @@ import 'package:chetan_koli/Assigment5/drawer/dropdown.dart';
 import 'package:chetan_koli/Assigment6/SqlLiteDB/form.dart';
 import 'package:chetan_koli/Assigment6/SqlLiteDB/testlayout.dart';
 import 'package:chetan_koli/Assigment6/SqlLiteDB/viewusers.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import './Assigment3/RoutsAndNavigations/screen_one.dart';
 import './Assigment3/RoutsAndNavigations/screen_three.dart';
 import './Assigment3/RoutsAndNavigations/screen_two.dart';
+import 'Assigment3/TimerAndStopWatch/stw.dart';
+import 'Assigment7/FirebaseAuthentication/LoginUi/authui.dart';
 
-
-void main() {
+void main() async {
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 }
 
 class MyApp extends StatelessWidget {
@@ -31,12 +36,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FormValidation(),
+      home: const AuthUi(),
       routes: {
         '/one': (_) => const ScreenOne(),
         '/two': (_) => const ScreenTwo(),
         '/three': (_) => const ScreenThree(),
-        '/viewUsers' : (_) => const ViewAllUsers(),
+        '/viewUsers': (_) => const ViewAllUsers()
         //'/dorpdown':(_) => const DropDownMenu()
       },
     );
